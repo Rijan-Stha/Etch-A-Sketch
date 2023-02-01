@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Etch-A-Sketch</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <div class="container">
+        <div id="section-choice">
+            <div class="option" id="no-of-grids">
+                <label for="grid-row">
+                    <p class="title">Rows</p>
+                    <input type="number" class="grid" id="row" name="grid-row" placeholder="Max 32"/>
+                </label>
+                <label for="grid-column" >
+                     <p class="title">Columns</p>
+                     <input type="number" class="grid" id="column" name="grid-column" placeholder="Max 32"/>
+                </label>
+            </div>
+            <div class="option" id="color-choice">
+                <p class="title">Color </p>
+                <input type="color" id="color">
+            </div>
+            <div class="option" id="eraser-choice">
+                <button class="btn" id="eraser">Eraser</button>
+            </div>
+            <div class="option" id="reset-choice">
+                <button class="btn" id="reset">Reset</button>
+            </div>
+        </div>
+        <div id="section-grid">
+                
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,199 @@
+/* ------------------- */
+/* --CSS VARIABLES-- */
+/* ----------------- */
+
+:root{
+  --color:white;
+}
+
+/* ----------- */
+/* CSS RESETS */
+/* ---------- */
+*,
+*::after,
+*::before{
+    box-sizing: border-box;
+    
+}
+
+body{
+    text-rendering: optimizeSpeed;
+    min-height: 100vh;
+    line-height: 1.1;
+    font-family:Fira Code;
+   background: #ccc; 
+  
+}
+
+
+html:focus-within{
+    scroll-behavior: smooth;
+}
+
+h1,h2,h3,h4,h5,h6,
+p,dd,dl,li{
+  margin:0;  
+}
+
+input,textarea,option{
+    font:inherit;
+}
+
+picture,img{
+    display: block;
+    max-width: 100%;
+}
+
+@media(prefers-reduced-motion:reduce){
+    *,
+    *::after,
+    *::before{
+        animation-duration: 0.01ms !important;
+        transition-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        scroll-behavior: smooth;
+    }
+
+    html:focus-within{
+        scroll-behavior: smooth;
+    }
+}
+
+button{
+    border: none;
+}
+
+/* --------------- */
+/* Utility Classes */
+/* -------------- */
+
+.d-block{
+    display: block;
+}
+
+.flex{
+    display: flex;
+    gap: var(--gap,1rem);
+}
+
+.grid{
+    display: grid;
+    gap: var(--gap,1rem);
+}
+
+.flow *:where(:not(:first-child)){
+    margin-top: var(--gap,1rem);
+}
+/* --------------- */
+/* --COMPONENTS-- */
+/* --------------- */
+
+.container{
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column-reverse;
+    justify-content: center;
+    align-items: center;
+    gap:5rem;
+    padding:4.4rem;
+}
+
+.container *{
+    transition: all .4s linear;
+}
+
+#section-choice{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+}
+
+#no-of-grids{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    gap:1rem;
+}
+
+.option{
+    font-size: 1rem;
+    font-weight: bold;
+    color:brown;
+    text-transform: uppercase;
+    letter-spacing: .1rem;
+}
+
+.option  input{ 
+    border: none;
+    margin-block-start: .4rem;
+    padding:.5rem .4rem;
+    font-size: 90%;
+    font-family: Poppins;
+    border-radius: 8px;
+    box-shadow: 0 5px 3px rgba(0,0,0,0.3);
+}
+
+.option input:hover{
+    scale: 1.1;
+}
+
+.btn{
+    font-family: Poppins;
+    width:11rem;
+    height: 2.5rem;
+    background:rgba(0,0,0,0.4);
+    padding:.4rem .5rem;
+    border-radius: 10px;
+    text-transform: uppercase;
+    letter-spacing: .1rem;
+    color: gold;
+    font-size: 1rem;
+    text-shadow: 0 2px 2px gray;
+    box-shadow: 2px 4px 5px rgba(0,0,0,0.3), 2px -4px 5px rgba(0,0,0,0.3);
+    cursor: pointer;
+    font-weight: 300;
+}
+
+.btn:hover{
+    scale:1.1;
+}
+
+#section-grid{
+    display: grid;
+    max-width:40rem;
+    width: 100%;
+    aspect-ratio: 1;
+    background:white;
+    border-radius: 10px;
+    box-shadow: 10px 10px 0 rgba(0,0,0,0.4);
+    transition: all .1s linear;
+}
+
+@media (min-width:700px) {
+    .container{
+        flex-direction: row;  
+    }
+
+    #rainbow-choice{
+        margin-top: 4rem;
+    }
+
+    #color-choice{
+        margin-top:2rem;
+    }
+    
+}
+
+#color{
+    width: 10rem;
+    height: 10rem;
+    border-radius: 20px;
+    cursor: pointer;
+}
+
+/* #section-grid *{
+    border:1px solid black;
+} */
+
